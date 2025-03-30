@@ -1,0 +1,17 @@
+[
+    {
+        "name": "film_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "category_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_update",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]

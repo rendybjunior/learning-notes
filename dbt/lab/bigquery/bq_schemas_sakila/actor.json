@@ -1,0 +1,22 @@
+[
+    {
+        "name": "actor_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "first_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_update",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]

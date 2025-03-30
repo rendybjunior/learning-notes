@@ -1,0 +1,17 @@
+[
+    {
+        "name": "country_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "country",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_update",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]

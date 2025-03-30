@@ -1,0 +1,17 @@
+[
+    {
+        "name": "actor_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "film_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_update",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]
