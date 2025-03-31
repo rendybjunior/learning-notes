@@ -1,0 +1,57 @@
+site_name: Praktis dbt
+site_url: https://rendybjunior.github.io/praktisdbt/
+site_author: Rendy B. Junior
+site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan tips _best practices_."
+
+# Theme settings
+theme:
+  name: material  # Uses the Material for MkDocs theme
+  palette:
+    scheme: default
+    primary: blue
+    accent: light-blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - dark_mode
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Chapter 1:
+      - Introduction: chapter1/1-intro.md
+  - Chapter 2:
+      - Project: chapter2/1-project.md
+      - Source: chapter2/2-source.md
+  - About: about.md
+
+# Extra settings
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rendybjunior
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search
+  - literate-nav  # Allows using folder-based navigation
+  - mkdocs-simple-hooks  # (Optional) Adds extra hook customization
+
+# Deploy settings
+repo_url: https://github.com/rendybjunior/praktisdbt
+edit_uri: edit/main/docs/

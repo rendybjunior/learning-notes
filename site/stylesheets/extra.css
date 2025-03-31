@@ -1,0 +1,14 @@
+/* Hide sidebar section titles */
+.md-nav__title {
+    display: none !important;
+}
+
+/* .sponsor-button, .star-button {
+    margin-left: 10px;
+    background-color: white !important;
+    color: black !important;
+    padding: 6px 10px;
+    font-family: sans-serif;
+    font-size: .5rem;
+    text-decoration: none;
+} */

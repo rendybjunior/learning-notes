@@ -1,4 +1,4 @@
-site_name: Praktis Pemrosesan Data dengan dbt
+site_name: Praktis dbt
 site_url: https://rendybjunior.github.io/praktisdbt/
 site_author: Rendy B. Junior
 site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan tips _best practices_."
@@ -6,50 +6,76 @@ site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan 
 # Theme settings
 theme:
   name: material  # Uses the Material for MkDocs theme
-  palette:
-    scheme: default
-    primary: blue
-    accent: light-blue
-  font:
-    text: Roboto
-    code: Roboto Mono
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.instant
-    - toc.integrate
-
-# Navigation structure
-nav:
-  - Home: index.md
-  - Chapter 1:
-      - Introduction: chapter1/1-intro.md
-  - Chapter 2:
-      - Project: chapter2/1-project.md
-      - Source: chapter2/2-source.md
-  - About: about.md
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 # Extra settings
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/rendybjunior
-
+    - icon: material/heart
+      link: https://github.com/sponsors/rendybjunior
+      name: Sponsor Me
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - js/sponsor-button.js
+  
 # Extensions
 markdown_extensions:
+
+  # Python Markdown
+  - abbr
   - admonition
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.emoji
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
       permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 # Plugins
 plugins:
   - search
   - literate-nav  # Allows using folder-based navigation
-  - mkdocs-simple-hooks  # (Optional) Adds extra hook customization
 
 # Deploy settings
 repo_url: https://github.com/rendybjunior/praktisdbt
