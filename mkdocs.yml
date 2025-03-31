@@ -60,7 +60,7 @@ extra:
       link: https://x.com/rendybjunior
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/rendybjunior/
-  generator: false
+  #generator: false
 copyright: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.id">Lisensi CC BY-SA 4.0</a> | Praktis dbt | rendybjunior
 extra_css:
   - stylesheets/extra.css
