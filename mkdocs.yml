@@ -1,11 +1,12 @@
 site_name: Praktis dbt
-site_url: https://rendybjunior.github.io/praktisdbt/
+site_url: https://praktisdbt.rendybjunior.com/
 site_author: Rendy B. Junior
 site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan tips _best practices_."
 
 # Theme settings
 theme:
   name: material  # Uses the Material for MkDocs theme
+  custom_dir: overrides
   features:
     - navigation.expand
     - navigation.path
