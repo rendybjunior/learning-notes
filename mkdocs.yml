@@ -3,6 +3,12 @@ site_url: https://praktisdbt.rendybjunior.com/
 site_author: Rendy B. Junior
 site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan tips _best practices_."
 
+nav:
+  - Praktik dbt: index.md
+  - Analyses: analyses.md
+  - Chapter 1: chapter-1/
+  - Cheatsheet: cheatsheet.md
+
 # Theme settings
 theme:
   name: material  # Uses the Material for MkDocs theme
@@ -10,6 +16,8 @@ theme:
   custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
+    logo: fontawesome/solid/book
+    favicon: fontawesome/solid/book
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -20,6 +28,7 @@ theme:
     - navigation.top
     - content.code.copy
     - content.code.annotate
+    - content.tooltips
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -58,6 +67,8 @@ extra:
     - icon: material/heart
       link: https://github.com/sponsors/rendybjunior
       name: Sponsor Me
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/InsinyurData
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/rendybjunior/
     - icon: fontawesome/brands/x-twitter
@@ -109,7 +120,9 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite # `#!python print('hello')` # https://pygments.org/docs/lexers/
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.keys
   - pymdownx.mark # highlighting using ==mark me== 
   - pymdownx.smartsymbols # https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
@@ -139,6 +152,7 @@ plugins:
   - offline
   - social
   - tags
+  - glightbox
 
 # Deploy settings
 repo_url: https://github.com/rendybjunior/praktisdbt
