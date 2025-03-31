@@ -8,6 +8,7 @@ theme:
   name: material  # Uses the Material for MkDocs theme
   custom_dir: overrides
   features:
+    - navigation.instant
     - navigation.expand
     - navigation.path
     - navigation.footer
