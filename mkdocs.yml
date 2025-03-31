@@ -6,12 +6,16 @@ site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan 
 # Theme settings
 theme:
   name: material  # Uses the Material for MkDocs theme
+  language: id
   custom_dir: overrides
   features:
     - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.expand
-    - navigation.path
     - navigation.footer
+    - toc.follow
+    - navigation.top
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -32,19 +36,18 @@ extra:
     provider: google
     property: G-EF4W9T5CB1
     feedback:
-      title: Was this page helpful?
+      title: Apakah halaman ini mudah dipahami?
       ratings:
         - icon: material/emoticon-happy-outline
-          name: This page was helpful
+          name: Mudah
           data: 1
           note: >-
-            Thanks for your feedback!
+            Terima kasih!
         - icon: material/emoticon-sad-outline
-          name: This page could be improved
+          name: Sulit dipahami
           data: 0
           note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="mailto:insinyur.data@gmail.com" target="_blank" rel="noopener">feedback form</a>.
+            Beritahu kami apa kesulitannya <a href="https://forms.gle/8eGzuLeVdNHJPCwZ7" target="_blank" rel="noopener">di sini</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/rendybjunior
@@ -95,6 +98,8 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
+  #- search.suggest # experimental
+  #- search.highlight # experimental
   - literate-nav  # Allows using folder-based navigation
   - meta # for adding comments to all pages
 
