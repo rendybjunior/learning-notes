@@ -1,7 +1,3 @@
----
-comments: true
----
-
 # Analyses
 
 Saat kita melakukan analisis, seringkali tidak untuk digunakan sebagai model dan tidak perlu dibuatkan tabelnya. Analysis hanya perlu di-compile untuk mendapatkan SQL query yang kemudian digunakan di BI tools untuk visualisasi.

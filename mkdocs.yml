@@ -78,6 +78,7 @@ markdown_extensions:
 plugins:
   - search
   - literate-nav  # Allows using folder-based navigation
+  - meta # for adding comments to all pages
 
 # Deploy settings
 repo_url: https://github.com/rendybjunior/praktisdbt
