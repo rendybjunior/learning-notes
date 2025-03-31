@@ -8,6 +8,8 @@ theme:
   name: material  # Uses the Material for MkDocs theme
   language: id
   custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -16,6 +18,8 @@ theme:
     - navigation.footer
     - toc.follow
     - navigation.top
+    - content.code.copy
+    - content.code.annotate
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -79,36 +83,62 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
 
   # Python Markdown Extensions
-  - pymdownx.arithmatex:
-      generic: true
+  #- pymdownx.arithmatex:
+  #    generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
+  - pymdownx.blocks.caption #https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/caption/
+  #/// caption
+  #Fruit Count
+  #///
+  - pymdownx.caret # superscript H^2^0
+  - pymdownx.details # ??? note, ??? note+, !!! info inline, !!! info inline end
+  - pymdownx.emoji: # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#using-emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums: true
+      line_spans: __span
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite # `#!python print('hello')` # https://pygments.org/docs/lexers/
+  - pymdownx.snippets
   - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.mark # highlighting using ==mark me== 
+  - pymdownx.smartsymbols # https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  # subscript CH~3~CH~2~OH
+  # strike ~~Delete me~~
+  - pymdownx.critic
+  # Addition {++ ++}
+  # Deletion {-- --}
+  # Substitution {~~ ~> ~~}
+  # Comment {>> <<}
+  # Highlight {== ==}{>> <<}
 
 # Plugins
 plugins:
+  - git-authors
+  - git-revision-date-localized
   - search
   #- search.suggest # experimental
   #- search.highlight # experimental
   - literate-nav  # Allows using folder-based navigation
   - meta # for adding comments to all pages
+  - offline
+  - social
+  - tags
 
 # Deploy settings
 repo_url: https://github.com/rendybjunior/praktisdbt

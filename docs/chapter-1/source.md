@@ -3,15 +3,32 @@
 Source adalah bahan mentah pemrosesan yang berasal dari sumber data, dipanggil dalam SQL dengan menggunakan `{{source('nama_source', 'nama_table')}}`
 
 Misal kita buat file dalam folder `model/<filename>.yml` dengan isi sebagai berikut.
-```yaml
+```yaml title="model/filename.yml" hl_lines="2 3"
 sources:
   - name: jaffle_shop
     database: raw  
-    schema: jaffle_shop  
+    schema: jaffle_shop  # (1)
     tables:
       - name: orders
 ```
-Artinya kita bisa memanggil table `raw.orders` dengan `{{ source('jaffle_shop', 'orders')}}`.
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
+
+++ctrl+alt+del++
+
+
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+
+Artinya kita bisa memanggil table `raw.orders` dengan `#!sql+jinja {{ source('jaffle_shop', 'orders')}}`.
 Tips: Sources bisa dikumpulkan di satu folder `model/sources/*_sources.yml`
 Tips: Sources bisa dinamakan `sources.yml` jika hanya satu source, atau `<sesuatu>_sources.yml`. Akan lebih baik jika bisa membedakan dari sistem mana data ini diambil dari namanya.
 Tips: Supaya tidak bingung dengan alias source, sebaiknya nama source dinamakan dengan `<database>_<schema>`, misal pada contoh di atas menjadi `raw_jaffle_shop`
