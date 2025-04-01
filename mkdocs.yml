@@ -155,7 +155,7 @@ plugins:
   #- search.highlight # experimental
   #- literate-nav  # Allows using folder-based navigation
   - meta # for adding comments to all pages
-  - offline
+  #- offline
   - social
   - tags
   - glightbox
