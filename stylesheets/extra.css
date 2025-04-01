@@ -1,26 +1,18 @@
-/* Hide sidebar section titles */
-.md-nav__title {
-    display: none !important;
-}
-
-.sponsor-button, .star-button {
+/* Style sponsor button */
+.sponsor-button {
     margin-left: 10px;
-    background-color: white !important;
-    color: black !important;
     padding: 6px 10px;
-    /* font-weight: bold; */
-    font-family: sans-serif;
-    font-size: .6rem;
+    font-size: 0.65rem;
+    font-family: "Arial", sans-serif;
     text-decoration: none;
 }
 
-/* Bold only first-level items in the left sidebar */
-.md-sidebar--primary .md-nav__list > .md-nav__item > .md-nav__link {
-    font-weight: bold;
-    font-size: 0.8rem; /* Optional: Increase size */
+[data-md-color-scheme="default"] .sponsor-button {
+    background-color: white !important;
+    color: black !important;
 }
 
-/* Ensure nested (child) items remain normal */
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__item > .md-nav__link {
-    font-weight: normal;
+[data-md-color-scheme="slate"] .sponsor-button {
+    background-color: hsla(var(--md-hue), 15%, 9%, 1) !important;
+    color: white !important;
 }
