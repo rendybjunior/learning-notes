@@ -4,9 +4,13 @@ site_author: Rendy B. Junior
 site_description: "Panduan pemrosesan data dengan dbt beserta praktik nyata dan tips _best practices_."
 
 nav:
-  - Praktik dbt: index.md
+  - Home: index.md
   - Analyses: analyses.md
-  - Chapter 1: chapter-1/
+  - Chapter 1:
+      - Exposure: chapter-1/exposure.md
+      - Group: chapter-1/group.md
+      - Project: chapter-1/project.md
+      - Source: chapter-1/source.md
   - Cheatsheet: cheatsheet.md
 
 # Theme settings
@@ -45,6 +49,8 @@ theme:
 
 # Extra settings
 extra:
+  html_header: |
+    <a href="/" class="md-header-title">Your Header Title</a>
   analytics:
     provider: google
     property: G-EF4W9T5CB1
@@ -147,7 +153,7 @@ plugins:
   - search
   #- search.suggest # experimental
   #- search.highlight # experimental
-  - literate-nav  # Allows using folder-based navigation
+  #- literate-nav  # Allows using folder-based navigation
   - meta # for adding comments to all pages
   - offline
   - social
