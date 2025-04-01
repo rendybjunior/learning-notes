@@ -20,8 +20,8 @@ theme:
   custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
-    logo: fontawesome/solid/book
-    favicon: fontawesome/solid/book
+    #logo: fontawesome/solid/book
+    #favicon: fontawesome/solid/book
   features:
     - navigation.instant
     - navigation.instant.progress
